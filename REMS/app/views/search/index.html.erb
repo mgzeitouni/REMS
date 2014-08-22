@@ -1,0 +1,6 @@
+<h1> Search </h1>
+
+<% form_tag comps_path, :method => 'get' do %>
+	<p>
+		<%= text_field_tag :search %>
+		<%= submit_tag "Search" %>
