@@ -1,0 +1,65 @@
+<h1>Listing comps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Street</th>
+      <th>Cross street 1</th>
+      <th>Cross street 2</th>
+      <th>Frontage</th>
+      <th>Ground</th>
+      <th>Basement</th>
+      <th>Mezz</th>
+      <th>Second</th>
+      <th>Third</th>
+      <th>Annual rent</th>
+      <th>Agent landlord company</th>
+      <th>Contact</th>
+      <th>Telephone</th>
+      <th>Email</th>
+      <th>Term</th>
+      <th>History</th>
+      <th>Date</th>
+      <th>Updated date</th>
+      <th>Comments</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comps.each do |comp| %>
+      <tr>
+        <td><%= comp.address %></td>
+        <td><%= comp.street %></td>
+        <td><%= comp.cross_street_1 %></td>
+        <td><%= comp.cross_street_2 %></td>
+        <td><%= comp.frontage %></td>
+        <td><%= comp.ground %></td>
+        <td><%= comp.basement %></td>
+        <td><%= comp.mezz %></td>
+        <td><%= comp.second %></td>
+        <td><%= comp.third %></td>
+        <td><%= comp.annual_rent %></td>
+        <td><%= comp.agent_landlord_company %></td>
+        <td><%= comp.contact %></td>
+        <td><%= comp.telephone %></td>
+        <td><%= comp.email %></td>
+        <td><%= comp.term %></td>
+        <td><%= comp.history %></td>
+        <td><%= comp.date %></td>
+        <td><%= comp.updated_date %></td>
+        <td><%= comp.comments %></td>
+        <td><%= link_to 'Show', comp %></td>
+        <td><%= link_to 'Edit', edit_comp_path(comp) %></td>
+        <td><%= link_to 'Destroy', comp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comp', new_comp_path %>

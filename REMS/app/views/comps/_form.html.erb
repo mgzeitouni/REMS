@@ -1,0 +1,97 @@
+<%= form_for(@comp) do |f| %>
+  <% if @comp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@comp.errors.count, "error") %> prohibited this comp from being saved:</h2>
+
+      <ul>
+      <% @comp.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :street %><br>
+    <%= f.text_field :street %>
+  </div>
+  <div class="field">
+    <%= f.label :cross_street_1 %><br>
+    <%= f.text_field :cross_street_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :cross_street_2 %><br>
+    <%= f.text_field :cross_street_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :frontage %><br>
+    <%= f.number_field :frontage %>
+  </div>
+  <div class="field">
+    <%= f.label :ground %><br>
+    <%= f.number_field :ground %>
+  </div>
+  <div class="field">
+    <%= f.label :basement %><br>
+    <%= f.number_field :basement %>
+  </div>
+  <div class="field">
+    <%= f.label :mezz %><br>
+    <%= f.number_field :mezz %>
+  </div>
+  <div class="field">
+    <%= f.label :second %><br>
+    <%= f.number_field :second %>
+  </div>
+  <div class="field">
+    <%= f.label :third %><br>
+    <%= f.number_field :third %>
+  </div>
+  <div class="field">
+    <%= f.label :annual_rent %><br>
+    <%= f.number_field :annual_rent %>
+  </div>
+  <div class="field">
+    <%= f.label :agent_landlord_company %><br>
+    <%= f.text_field :agent_landlord_company %>
+  </div>
+  <div class="field">
+    <%= f.label :contact %><br>
+    <%= f.text_field :contact %>
+  </div>
+  <div class="field">
+    <%= f.label :telephone %><br>
+    <%= f.text_field :telephone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :term %><br>
+    <%= f.text_field :term %>
+  </div>
+  <div class="field">
+    <%= f.label :history %><br>
+    <%= f.text_field :history %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_date %><br>
+    <%= f.date_select :updated_date %>
+  </div>
+  <div class="field">
+    <%= f.label :comments %><br>
+    <%= f.text_field :comments %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
